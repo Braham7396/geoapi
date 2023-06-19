@@ -23,10 +23,8 @@ const otpSchema = new mongoose.Schema(
 // Create TTL index
 otpSchema.index(
   { createdAt: 1 },
-  { expireAfterSeconds: process.env.OTP_EXPIRATION_TIME }
+  { expireAfterSeconds: process.env.OTP_EXPIRATION_TIME } // give time from process.env
 );
-
-// otpSchema.index({ userEmail: 1 }, { unique: true }); // need to test this
 
 const OTP = mongoose.model('OTP', otpSchema);
 

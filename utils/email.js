@@ -1,7 +1,9 @@
+/*eslint-disable*/
 const nodemailer = require('nodemailer');
+const htmlToText = require('html-to-text');
 
 const sendEmail = async (options) => {
-  // 1) create a transporter
+  // create a transporter - in test env
   // const transporter = nodemailer.createTransport({
   //   host: process.env.EMAIL_HOST,
   //   port: process.env.EMAIL_PORT,
@@ -10,6 +12,7 @@ const sendEmail = async (options) => {
   //     pass: process.env.EMAIL_PASSWORD,
   //   },
   // });
+
   // using production environment
   const transporter = nodemailer.createTransport({
     service: 'SendGrid',
