@@ -61,7 +61,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     userEmail: newUser.email,
     signupOTP: Math.floor(Math.random() * 900000) + 100000, // TODO
   });
-  const message = `Your signup OTP is: ${freshOTP.signupOTP}, this OTP is only valid for 5 minutes.`;
+  const message = `Your signup OTP is: ${freshOTP.signupOTP}`;
 
   try {
     await sendEmail({
@@ -177,7 +177,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     userEmail: user.email,
     passwordOTP: Math.floor(Math.random() * 900000) + 100000, // TODO
   });
-  const message = `Your Password reset OTP is ${freshOTP.passwordOTP}`;
+  const message = `Your Password reset OTP is: ${freshOTP.passwordOTP}`;
 
   try {
     await sendEmail({
