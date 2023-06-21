@@ -14,7 +14,7 @@ const cycleSchema = new mongoose.Schema(
     slug: String,
     createdAt: {
       type: Date,
-      default: Date.now(),
+      default: Date.now,
       select: false, // now this won't show for select
     },
     location: {
