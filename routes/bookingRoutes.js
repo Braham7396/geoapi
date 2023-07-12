@@ -9,7 +9,11 @@ router.use(authController.protect);
 router
   .route('/')
   .get(authController.restrictTo('admin'), bookingController.getAllBookings)
-  .post(bookingController.setCycleUserIds, bookingController.createBooking);
+  .post(
+    bookingController.setCycleUserIds,
+    bookingController.checkBookingValidity,
+    bookingController.createBooking
+  );
 
 router
   .route('/:id')
