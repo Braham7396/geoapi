@@ -12,7 +12,7 @@ exports.setCycleUserIds = (req, res, next) => {
   next();
 };
 
-exports.checkBookingValidity = catchAsync(async (req, res, next) => {
+exports.checkBookingPrerequisites = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
   const cycle = await Cycle.findById(req.body.cycle);
   if (user.balance < 15)

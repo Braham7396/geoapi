@@ -11,14 +11,14 @@ router
   .get(authController.restrictTo('admin'), bookingController.getAllBookings)
   .post(
     bookingController.setCycleUserIds,
-    bookingController.checkBookingValidity,
+    bookingController.checkBookingPrerequisites,
     bookingController.createBooking
   );
 
 router
   .route('/:id')
   .get(bookingController.getBooking) // need to have proper authorization for this
-  .patch(bookingController.updateBooking)
-  .delete(bookingController.deleteBooking);
+  .patch(bookingController.updateBooking) // no use -- might remove
+  .delete(bookingController.deleteBooking); // to end ride
 
 module.exports = router;
