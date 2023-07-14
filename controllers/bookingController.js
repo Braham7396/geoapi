@@ -28,8 +28,10 @@ exports.checkBookingPrerequisites = catchAsync(async (req, res, next) => {
 });
 
 exports.getAllBookings = factory.getAll(Booking);
-exports.getBooking = factory.getOne(Booking);
+exports.getBooking = factory.getOne(Booking); //* gets booking via booking id
 exports.createBooking = factory.createOne(Booking);
+
+//FIXME - make a proper costing system
 
 exports.deleteBooking = catchAsync(async (req, res, next) => {
   const doc = await Booking.findByIdAndDelete(req.params.id, {
@@ -37,10 +39,21 @@ exports.deleteBooking = catchAsync(async (req, res, next) => {
   });
   let cost = Math.round(
     (Date.now() - new Date(doc.value.createdAt)) / 1000 / 60
-  ); // TODO
+  ); //* need to be renewed with new algorithm
   if (req.user.balance < cost) cost = req.user.balance;
   res.status(200).json({
     status: 'success',
     cost,
+  });
+});
+
+// To show user their current booking if booked
+exports.getMyActiveBooking = catchAsync(async (req, res, next) => {
+  const doc = await Booking.findOne({ user: req.user.id });
+  if (!doc) return next(new AppError('No Active bookings!', 400));
+  doc.user = null;
+  res.status(200).json({
+    status: 'success',
+    data: doc,
   });
 });

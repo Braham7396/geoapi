@@ -14,7 +14,7 @@ const otpSchema = new mongoose.Schema(
     passwordOTP: String,
     createdAt: {
       type: Date,
-      default: Date.now, // Date.now() is immediately executed, resulting in all values to be same
+      default: Date.now, //* Date.now() is immediately executed, resulting in all values to be same
     },
   },
   { timestamps: true }

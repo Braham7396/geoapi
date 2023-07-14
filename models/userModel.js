@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please confirm your password'],
       validate: {
-        // This only works for save
+        //* This only works for save
         validator: function (el) {
           return el === this.password;
         },
@@ -69,14 +69,6 @@ userSchema.virtual('cycle', {
   foreignField: 'user',
   localField: '_id',
 });
-
-// userSchema.pre(/^find/, function (next) {
-//   this.populate({
-//     path: 'cycle',
-//     select: '-__v',
-//   });
-//   next();
-// });
 
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();

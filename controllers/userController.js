@@ -50,7 +50,7 @@ exports.getMe = catchAsync(async (req, res, next) => {
   });
 });
 
-// todo show user their current cycle if booked
+// TODO - show user their current cycle if booked
 
 exports.getUser = factory.getOne(User, { path: 'cycle' }); // add populate cycle here
 exports.getAllUsers = factory.getAll(User);

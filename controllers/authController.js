@@ -24,8 +24,8 @@ const createSendToken = (user, statusCode, res) => {
   };
   if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
   res.cookie('jwt', token, cookieOptions);
-  user.password = undefined; // this works and is necessary
-  user._id = null; // TODO, for some reason the _id changes insted of becoming undefined
+  user.password = undefined; //* this works and is necessary
+  user._id = null; //* user should not get their id
   res.status(statusCode).json({
     status: 'success',
     token,
@@ -60,7 +60,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 
   const freshOTP = await OTP.create({
     userEmail: newUser.email,
-    signupOTP: Math.floor(Math.random() * 900000) + 100000, // TODO
+    signupOTP: Math.floor(Math.random() * 900000) + 100000,
   });
   const message = `Your signup OTP is: ${freshOTP.signupOTP}`;
 
@@ -176,7 +176,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   const freshOTP = await OTP.create({
     userEmail: user.email,
-    passwordOTP: Math.floor(Math.random() * 900000) + 100000, // TODO
+    passwordOTP: Math.floor(Math.random() * 900000) + 100000,
   });
   const message = `Your Password reset OTP is: ${freshOTP.passwordOTP}`;
 

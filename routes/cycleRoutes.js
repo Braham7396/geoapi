@@ -6,7 +6,7 @@ const bookingRouter = require('./bookingRoutes');
 
 const router = express.Router();
 
-router.use('/:cycleId/bookings', bookingRouter); // TODO
+router.use('/:cycleId/bookings', bookingRouter);
 
 router.use(authController.protect);
 
