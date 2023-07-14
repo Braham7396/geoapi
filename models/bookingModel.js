@@ -70,8 +70,8 @@ bookingStream.on('change', async (change) => {
     user.balance -= cost;
     await user.save({ validateBeforeSave: false });
 
-    // * when delete -- save trip in pastBookings of the user (Adding trip info to db)
-    //! all users must have an empty pastTrips doc in the beginning (Done when signup otp verify)
+    //* when delete -- save trip in pastBookings of the user (Adding trip info to db)
+    //* all users must have an empty pastTrips doc in the beginning (Done when signup otp verify)
     await PastBooking.updateOne(
       { userId: doc.user },
       {

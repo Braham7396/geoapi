@@ -111,7 +111,7 @@ exports.verifySignupOTP = catchAsync(async (req, res, next) => {
     trips: [],
   });
 
-  await bookingsInit.save(); // to make an initial empty past bookings list
+  await bookingsInit.save(); //* to make an initial empty past bookings list
 
   createSendToken(newUser, 201, res);
 });
