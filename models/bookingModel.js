@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 const Cycle = require('./cycleModel');
 const User = require('./userModel');
+const PastBooking = require('./pastBookingsModel');
 
 const bookingSchema = new mongoose.Schema(
   {
@@ -50,16 +51,49 @@ const bookingStream = Booking.watch([], {
 
 bookingStream.on('change', async (change) => {
   if (change.operationType === 'delete') {
+    //* getting access to the recently deleted booking document
     const doc = change.fullDocumentBeforeChange;
-    await Cycle.findByIdAndUpdate(doc.cycle, { available: true });
-    let cost = Math.round((Date.now() - new Date(doc.createdAt)) / 1000 / 60);
+    // cycle becomes available
+    // await Cycle.findByIdAndUpdate(doc.cycle, { available: true });
+    await Cycle.updateOne({ _id: doc.cycle }, { available: true });
+    // timings of the trip
+    const endTime = Date.now();
+    const startTime = new Date(doc.createdAt);
+
+    //* cost measurement
+    // FIXME - need a better method to calculate cost
+    let cost = Math.round((endTime - startTime) / 1000 / 60); //? 1 Rs/min
+
+    //* updating the user balance now
     const user = await User.findById(doc.user);
     if (cost > user.balance) cost = user.balance;
     user.balance -= cost;
-    await user.save({ validateBeforeSave: false }); // also need to add trip info to user db
+    await user.save({ validateBeforeSave: false });
+
+    // * when delete -- save trip in pastBookings of the user (Adding trip info to db)
+    //! all users must have an empty pastTrips doc in the beginning (Done when signup otp verify)
+    await PastBooking.updateOne(
+      { userId: doc.user },
+      {
+        $push: {
+          trips: {
+            $each: [
+              {
+                cycleId: doc.cycle,
+                startTime,
+                endTime,
+                cost,
+              },
+            ],
+            $sort: { startTime: -1 },
+          },
+        },
+      }
+    );
   } else if (change.operationType === 'insert') {
     const doc = change.fullDocument;
-    await Cycle.findByIdAndUpdate(doc.cycle, { available: false });
+    // cycle becomes unavailable
+    await Cycle.updateOne({ _id: doc.cycle }, { available: false });
   }
 });
 

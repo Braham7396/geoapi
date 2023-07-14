@@ -1,4 +1,6 @@
 const User = require('../models/userModel');
+const PastBooking = require('../models/pastBookingsModel');
+const Booking = require('../models/bookingModel');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
@@ -34,7 +36,17 @@ exports.updateMe = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteMe = catchAsync(async (req, res, next) => {
+  const activeBooking = await Booking.findOne({ user: req.user.id });
+  if (activeBooking)
+    return next(
+      new AppError(
+        'You cannot delete your account while you have an active trip. Please end your trip, then proceed',
+        400
+      )
+    );
   await User.findByIdAndDelete(req.user.id);
+  await PastBooking.findOneAndDelete({ userId: req.user.id });
+  //? what if - user makes a booking and then deletes account?
   res.status(204).json({
     status: 'success',
     data: null,
@@ -49,8 +61,6 @@ exports.getMe = catchAsync(async (req, res, next) => {
     data: { user },
   });
 });
-
-// TODO - show user their current cycle if booked
 
 exports.getUser = factory.getOne(User, { path: 'cycle' }); // add populate cycle here
 exports.getAllUsers = factory.getAll(User);

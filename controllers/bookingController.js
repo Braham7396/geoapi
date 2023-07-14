@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 const Booking = require('../models/bookingModel');
-const User = require('../models/userModel');
 const Cycle = require('../models/cycleModel');
 const factory = require('./handlerFactory');
 const catchAsync = require('../utils/catchAsync');
@@ -47,7 +46,7 @@ exports.deleteBooking = catchAsync(async (req, res, next) => {
   });
 });
 
-// To show user their current booking if booked
+//* To show user their current booking if booked via user id
 exports.getMyActiveBooking = catchAsync(async (req, res, next) => {
   const doc = await Booking.findOne({ user: req.user.id });
   if (!doc) return next(new AppError('No Active bookings!', 400));

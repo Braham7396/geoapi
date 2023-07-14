@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const Booking = require('../models/bookingModel');
 const OTP = require('../models/otpModel');
+const PastBooking = require('../models/pastBookingsModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const sendEmail = require('../utils/email');
@@ -104,6 +105,14 @@ exports.verifySignupOTP = catchAsync(async (req, res, next) => {
     verified: true,
   });
   await OTP.findOneAndDelete({ userEmail: email });
+
+  const bookingsInit = new PastBooking({
+    userId: newUser._id,
+    trips: [],
+  });
+
+  await bookingsInit.save(); // to make an initial empty past bookings list
+
   createSendToken(newUser, 201, res);
 });
 
