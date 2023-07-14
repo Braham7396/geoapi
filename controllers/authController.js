@@ -3,6 +3,7 @@
 const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
+const Booking = require('../models/bookingModel');
 const OTP = require('../models/otpModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
@@ -237,4 +238,17 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
   await user.save();
   // 4) Log user in, send jwt
   createSendToken(user, 200, res);
+});
+
+exports.checkBookingAccessPrequisites = catchAsync(async (req, res, next) => {
+  const booking = await Booking.findById(req.params.id);
+  if (
+    (booking && booking.user.toString() === req.user.id) ||
+    req.user.role === 'admin'
+  )
+    next();
+  else
+    return next(
+      new AppError('booking not valid OR you are not authorised', 400)
+    );
 });

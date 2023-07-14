@@ -17,14 +17,11 @@ router.patch('/updateMyPassword/', authController.updatePassword);
 
 router.patch('/updateMe', userController.updateMe);
 router.delete('/deleteMe', userController.deleteMe);
-router.get('/me', userController.getMe, userController.getUser);
+router.get('/me', userController.getMe);
 
 router.use(authController.restrictTo('admin'));
 
-router
-  .route('/')
-  .get(userController.getAllUsers)
-  .post(userController.createUser);
+router.route('/').get(userController.getAllUsers);
 router
   .route('/:id')
   .get(userController.getUser)

@@ -1,4 +1,8 @@
+/* eslint-disable no-console */
+/* eslint-disable prefer-arrow-callback */
 const mongoose = require('mongoose');
+const Cycle = require('./cycleModel');
+const User = require('./userModel');
 
 const bookingSchema = new mongoose.Schema(
   {
@@ -36,4 +40,25 @@ bookingSchema.index({ user: 1 }, { unique: true });
 // );
 
 const Booking = mongoose.model('Booking', bookingSchema);
+
+const bookingStream = Booking.watch([], {
+  fullDocument: 'updateLookup',
+  fullDocumentBeforeChange: 'required',
+});
+
+bookingStream.on('change', async (change) => {
+  if (change.operationType === 'delete') {
+    const doc = change.fullDocumentBeforeChange;
+    await Cycle.findByIdAndUpdate(doc.cycle, { available: true });
+    let cost = Math.round((Date.now() - new Date(doc.createdAt)) / 1000 / 60);
+    const user = await User.findById(doc.user);
+    if (cost > user.balance) cost = user.balance;
+    user.balance -= cost;
+    await user.save({ validateBeforeSave: false }); // also need to add trip info to user db
+  } else if (change.operationType === 'insert') {
+    const doc = change.fullDocument;
+    await Cycle.findByIdAndUpdate(doc.cycle, { available: false });
+  }
+});
+
 module.exports = Booking;

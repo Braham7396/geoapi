@@ -17,8 +17,13 @@ router
 
 router
   .route('/:id')
-  .get(bookingController.getBooking) // need to have proper authorization for this
-  .patch(bookingController.updateBooking) // no use -- might remove
-  .delete(bookingController.deleteBooking); // to end ride
+  .get(
+    authController.checkBookingAccessPrequisites, // if admin OR valid user
+    bookingController.getBooking
+  )
+  .delete(
+    authController.checkBookingAccessPrequisites, // if admin OR valid user
+    bookingController.deleteBooking
+  ); // to end ride
 
 module.exports = router;

@@ -26,7 +26,7 @@ exports.updateMe = catchAsync(async (req, res, next) => {
     new: true,
     runValidators: true,
   });
-  updatedUser._id = null; // user should not get the id
+  updatedUser._id = null; //* user should not get their id
   res.status(200).json({
     status: 'success',
     data: { user: updatedUser },
@@ -42,7 +42,7 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
 });
 
 exports.getMe = catchAsync(async (req, res, next) => {
-  const user = await User.findById(req.user.id); // populate cycles?
+  const user = await User.findById(req.user.id); // no cycle populate here
   user._id = null;
   res.status(200).json({
     status: 'success',
@@ -50,14 +50,7 @@ exports.getMe = catchAsync(async (req, res, next) => {
   });
 });
 
-// TODO - show user their current cycle if booked
-
-exports.createUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not defined. Please use /signup instead.',
-  });
-};
+// todo show user their current cycle if booked
 
 exports.getUser = factory.getOne(User, { path: 'cycle' }); // add populate cycle here
 exports.getAllUsers = factory.getAll(User);
