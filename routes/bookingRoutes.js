@@ -21,11 +21,11 @@ router
   .route('/:id')
   .get(
     authController.checkBookingAccessPrequisites, // if admin OR valid user
-    bookingController.getBooking
+    bookingController.getBooking //! gives user id
   )
   .delete(
     authController.checkBookingAccessPrequisites, // if admin OR valid user
-    bookingController.deleteBooking
+    bookingController.deleteBooking //! gives user id
   ); // to end ride
 
 module.exports = router;

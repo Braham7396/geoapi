@@ -27,8 +27,9 @@ exports.checkBookingPrerequisites = catchAsync(async (req, res, next) => {
 });
 
 exports.getAllBookings = factory.getAll(Booking);
-exports.getBooking = factory.getOne(Booking); //* gets booking via booking id
-exports.createBooking = factory.createOne(Booking);
+//* gets booking via booking id
+exports.getBooking = factory.getOne(Booking); //! gives user id
+exports.createBooking = factory.createOne(Booking); //! gives user id
 
 //FIXME - make a proper costing system
 

@@ -20,6 +20,9 @@ const bookingSchema = new mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: 'User',
       required: [true, 'Booking must be done by a user'],
+      //? chatGPT - does not appear for createBooking, getBooking (how to - select : false)
+      //? but still we could search for bookings made by a specific user
+      //? also user should appear on bookingStream
     },
   },
   {
