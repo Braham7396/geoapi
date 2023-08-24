@@ -4,7 +4,7 @@ const mqtt = require('mqtt');
 const client = mqtt.connect('mqtt://broker.hivemq.com');
 
 client.on('connect', () => {
-  client.subscribe('braham');
+  client.subscribe('test123');
   console.log('Client has subscribed');
 });
 

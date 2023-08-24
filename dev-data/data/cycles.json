@@ -1,802 +1,802 @@
 [
   {
-    "name": "TempCycle-0",
-    "location": {
-      "type": "Point",
-      "coordinates": [26.692098562743304, 88.33650809444836]
-    },
-    "available": false
-  },
-  {
     "name": "TempCycle-1",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.730775482239657, 88.39254438522026]
-    },
-    "available": true
+      "coordinates": [19.00256916620618, 73.05637669350388]
+    }
   },
   {
     "name": "TempCycle-2",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.65257025468607, 88.35847315838281]
-    },
-    "available": true
+      "coordinates": [19.04235118665877, 73.07333631276103]
+    }
   },
   {
     "name": "TempCycle-3",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.654737556276984, 88.3201015370097]
-    },
-    "available": false
+      "coordinates": [19.09092451733474, 73.07079310082759]
+    }
   },
   {
     "name": "TempCycle-4",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.69231125634071, 88.32476669941269]
-    },
-    "available": true
+      "coordinates": [18.99392395239898, 73.09158261447236]
+    }
   },
   {
     "name": "TempCycle-5",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.749999891909155, 88.24990914814258]
-    },
-    "available": true
+      "coordinates": [18.994934030363012, 72.9839178636443]
+    }
   },
   {
     "name": "TempCycle-6",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.63183161448789, 88.39583902870443]
-    },
-    "available": false
+      "coordinates": [18.964810781698958, 73.00965442213267]
+    }
   },
   {
     "name": "TempCycle-7",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.71357207065769, 88.32210652772835]
-    },
-    "available": true
+      "coordinates": [18.995532368675455, 73.1091818960811]
+    }
   },
   {
     "name": "TempCycle-8",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.624745242752354, 88.33619088257191]
-    },
-    "available": true
+      "coordinates": [19.050213721592815, 73.0980360592546]
+    }
   },
   {
     "name": "TempCycle-9",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.768444872471466, 88.33731892010458]
-    },
-    "available": false
+      "coordinates": [19.00041677713289, 73.04822619054794]
+    }
   },
   {
     "name": "TempCycle-10",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.687560114158252, 88.31854328432486]
-    },
-    "available": true
+      "coordinates": [19.08711267865535, 73.13804976201462]
+    }
   },
   {
     "name": "TempCycle-11",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.729501438955634, 88.3899844395271]
-    },
-    "available": true
+      "coordinates": [19.012386405622614, 73.00983071643462]
+    }
   },
   {
     "name": "TempCycle-12",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.699872712784202, 88.23998579305683]
-    },
-    "available": false
+      "coordinates": [19.042735583829348, 73.02604229910645]
+    }
   },
   {
     "name": "TempCycle-13",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.65774430310381, 88.37191596705647]
-    },
-    "available": true
+      "coordinates": [19.078544335163873, 73.08504115932777]
+    }
   },
   {
     "name": "TempCycle-14",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.76232626675776, 88.3824389385065]
-    },
-    "available": true
+      "coordinates": [19.047229949109266, 73.14893943360953]
+    }
   },
   {
     "name": "TempCycle-15",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.62785599237897, 88.29343184806015]
-    },
-    "available": false
+      "coordinates": [18.97731845129739, 73.01208487600678]
+    }
   },
   {
     "name": "TempCycle-16",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.72228898920546, 88.29656090052661]
-    },
-    "available": true
+      "coordinates": [18.972030086231133, 73.09114308826732]
+    }
   },
   {
     "name": "TempCycle-17",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.680914802746216, 88.38276605150381]
-    },
-    "available": true
+      "coordinates": [19.0104482399025, 72.98649895142312]
+    }
   },
   {
     "name": "TempCycle-18",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.76119466286346, 88.35577670966184]
-    },
-    "available": false
+      "coordinates": [18.972959627153273, 73.08304157205886]
+    }
   },
   {
     "name": "TempCycle-19",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.689833350884157, 88.33034740129818]
-    },
-    "available": true
+      "coordinates": [19.04205511310038, 73.05023346949349]
+    }
   },
   {
     "name": "TempCycle-20",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.775907816360533, 88.3503095686142]
-    },
-    "available": true
+      "coordinates": [18.96581893870482, 73.0181515934927]
+    }
   },
   {
     "name": "TempCycle-21",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.70101474936596, 88.26855647283779]
-    },
-    "available": false
+      "coordinates": [19.093093989477417, 73.13488648292525]
+    }
   },
   {
     "name": "TempCycle-22",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.69301992703769, 88.29497969528047]
-    },
-    "available": true
+      "coordinates": [19.081486209689928, 73.11699223812171]
+    }
   },
   {
     "name": "TempCycle-23",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.643129106769265, 88.39012176823076]
-    },
-    "available": true
+      "coordinates": [19.035692299577754, 72.99151629824472]
+    }
   },
   {
     "name": "TempCycle-24",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.70390442833997, 88.23403284387038]
-    },
-    "available": false
+      "coordinates": [19.096286386155853, 73.04626266982737]
+    }
   },
   {
     "name": "TempCycle-25",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.747723152661095, 88.3165394818075]
-    },
-    "available": true
+      "coordinates": [18.98647341459096, 73.05206898704236]
+    }
   },
   {
     "name": "TempCycle-26",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.72920455718368, 88.24439729094244]
-    },
-    "available": true
+      "coordinates": [19.068192180938258, 73.00624944806198]
+    }
   },
   {
     "name": "TempCycle-27",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.633114832255664, 88.39745354211489]
-    },
-    "available": false
+      "coordinates": [19.01741225232328, 73.08757613977095]
+    }
   },
   {
     "name": "TempCycle-28",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.648534683866455, 88.33703023770438]
-    },
-    "available": true
+      "coordinates": [19.05151495644854, 73.05761242945565]
+    }
   },
   {
     "name": "TempCycle-29",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.70805239676864, 88.32959253588527]
-    },
-    "available": true
+      "coordinates": [19.08790881224725, 73.03545352134618]
+    }
   },
   {
     "name": "TempCycle-30",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.74041335023061, 88.27796183690037]
-    },
-    "available": false
+      "coordinates": [19.019622404589267, 73.1478734140165]
+    }
   },
   {
     "name": "TempCycle-31",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.6787871755826, 88.38012641401319]
-    },
-    "available": true
+      "coordinates": [19.05161247996864, 73.14422010397546]
+    }
   },
   {
     "name": "TempCycle-32",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.60924123998183, 88.3528937851067]
-    },
-    "available": true
+      "coordinates": [19.10609970683048, 73.01618812828976]
+    }
   },
   {
     "name": "TempCycle-33",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.700754727186244, 88.37863376714792]
-    },
-    "available": false
+      "coordinates": [19.099570945682608, 73.10832401072948]
+    }
   },
   {
     "name": "TempCycle-34",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.618017416342965, 88.28896463650413]
-    },
-    "available": true
+      "coordinates": [19.11722695641101, 73.0890542953598]
+    }
   },
   {
     "name": "TempCycle-35",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.739404900492264, 88.35777868437742]
-    },
-    "available": true
+      "coordinates": [18.978399214111146, 73.01803067435335]
+    }
   },
   {
     "name": "TempCycle-36",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.666788916223286, 88.41049165799741]
-    },
-    "available": false
+      "coordinates": [19.004325072623907, 73.04456241785161]
+    }
   },
   {
     "name": "TempCycle-37",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.69513647588881, 88.31224893932739]
-    },
-    "available": true
+      "coordinates": [19.0160492920014, 73.04791956247028]
+    }
   },
   {
     "name": "TempCycle-38",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.636854067334664, 88.39580704031297]
-    },
-    "available": true
+      "coordinates": [19.107318050410804, 73.1152843251845]
+    }
   },
   {
     "name": "TempCycle-39",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.750170063009083, 88.25197840718498]
-    },
-    "available": false
+      "coordinates": [18.970925177802563, 73.01448756854063]
+    }
   },
   {
     "name": "TempCycle-40",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.705699185044956, 88.2380481822919]
-    },
-    "available": true
+      "coordinates": [18.962250092260085, 73.03049374149302]
+    }
   },
   {
     "name": "TempCycle-41",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.637123372616415, 88.35166126655713]
-    },
-    "available": true
+      "coordinates": [19.063047479667574, 73.02991946724006]
+    }
   },
   {
     "name": "TempCycle-42",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.721960384185056, 88.23755915665392]
-    },
-    "available": false
+      "coordinates": [19.0960312819216, 73.01160853399888]
+    }
   },
   {
     "name": "TempCycle-43",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.731635774006193, 88.2556632196437]
-    },
-    "available": true
+      "coordinates": [19.0323717243874, 72.9895692730416]
+    }
   },
   {
     "name": "TempCycle-44",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.70211233022814, 88.29753846614778]
-    },
-    "available": true
+      "coordinates": [19.05172458799944, 73.00916070771925]
+    }
   },
   {
     "name": "TempCycle-45",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.716002211489105, 88.25673322865245]
-    },
-    "available": false
+      "coordinates": [19.036067445338738, 73.0995955893587]
+    }
   },
   {
     "name": "TempCycle-46",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.647906651812352, 88.28716354317345]
-    },
-    "available": true
+      "coordinates": [19.03084197988032, 73.02323416194463]
+    }
   },
   {
     "name": "TempCycle-47",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.721172105346252, 88.30728608299371]
-    },
-    "available": true
+      "coordinates": [19.080634069809932, 73.13032198730413]
+    }
   },
   {
     "name": "TempCycle-48",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.70131938666348, 88.2662731280738]
-    },
-    "available": false
+      "coordinates": [18.983170411439062, 73.03483663339537]
+    }
   },
   {
     "name": "TempCycle-49",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.730392792955126, 88.33538030587039]
-    },
-    "available": true
+      "coordinates": [18.96743900699443, 73.03326854302621]
+    }
   },
   {
     "name": "TempCycle-50",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.755669117253504, 88.37438599509414]
-    },
-    "available": true
+      "coordinates": [19.106977823770638, 73.07049890574957]
+    }
   },
   {
     "name": "TempCycle-51",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.66173925757992, 88.34490550687053]
-    },
-    "available": false
+      "coordinates": [19.10430446270162, 73.03721714387211]
+    }
   },
   {
     "name": "TempCycle-52",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.645720184745684, 88.24132491232186]
-    },
-    "available": true
+      "coordinates": [19.07416250806113, 73.0356982353881]
+    }
   },
   {
     "name": "TempCycle-53",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.675445822455668, 88.37592360540376]
-    },
-    "available": true
+      "coordinates": [19.055040722048357, 73.10534869732201]
+    }
   },
   {
     "name": "TempCycle-54",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.71867867312452, 88.2894762315614]
-    },
-    "available": false
+      "coordinates": [19.071420789674377, 73.02686693260159]
+    }
   },
   {
     "name": "TempCycle-55",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.74420741612659, 88.37001338734522]
-    },
-    "available": true
+      "coordinates": [19.030054565154952, 73.11558726446808]
+    }
   },
   {
     "name": "TempCycle-56",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.693550525503912, 88.25935769002106]
-    },
-    "available": true
+      "coordinates": [19.097144123499163, 73.07739771037541]
+    }
   },
   {
     "name": "TempCycle-57",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.708084693512237, 88.2975966429064]
-    },
-    "available": false
+      "coordinates": [19.03871672760395, 73.06289729011804]
+    }
   },
   {
     "name": "TempCycle-58",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.713911136813977, 88.37510632496235]
-    },
-    "available": true
+      "coordinates": [19.096979386550807, 73.08649027034042]
+    }
   },
   {
     "name": "TempCycle-59",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.679230526079635, 88.37452469612086]
-    },
-    "available": true
+      "coordinates": [18.992107928814995, 72.99012623740884]
+    }
   },
   {
     "name": "TempCycle-60",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.76782332935048, 88.38100838382121]
-    },
-    "available": false
+      "coordinates": [19.06122561543791, 72.97379579094437]
+    }
   },
   {
     "name": "TempCycle-61",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.693218821416757, 88.23032534220987]
-    },
-    "available": true
+      "coordinates": [18.95527464590851, 73.0704638896556]
+    }
   },
   {
     "name": "TempCycle-62",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.66962373767253, 88.26235734260756]
-    },
-    "available": true
+      "coordinates": [19.061269373595476, 73.12597884449457]
+    }
   },
   {
     "name": "TempCycle-63",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.684970686908045, 88.27959931784862]
-    },
-    "available": false
+      "coordinates": [19.02826712689677, 73.14961124803573]
+    }
   },
   {
     "name": "TempCycle-64",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.7584425816112, 88.3486378296838]
-    },
-    "available": true
+      "coordinates": [19.071006872991493, 73.13629649607569]
+    }
   },
   {
     "name": "TempCycle-65",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.659364717628687, 88.39314730841772]
-    },
-    "available": true
+      "coordinates": [18.98189612513259, 73.14083109893132]
+    }
   },
   {
     "name": "TempCycle-66",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.744591631321942, 88.35110360962354]
-    },
-    "available": false
+      "coordinates": [19.03777305883869, 73.12857476951378]
+    }
   },
   {
     "name": "TempCycle-67",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.63119244191871, 88.35494306088373]
-    },
-    "available": true
+      "coordinates": [19.03259961223943, 72.98146543764341]
+    }
   },
   {
     "name": "TempCycle-68",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.740186996141354, 88.31935659742837]
-    },
-    "available": true
+      "coordinates": [19.037980104154077, 73.1246279224991]
+    }
   },
   {
     "name": "TempCycle-69",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.66009382718858, 88.23833828176213]
-    },
-    "available": false
+      "coordinates": [19.013403886464253, 73.14718148796487]
+    }
   },
   {
     "name": "TempCycle-70",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.75404110702751, 88.39783457153452]
-    },
-    "available": true
+      "coordinates": [19.061223514022547, 73.12547070666199]
+    }
   },
   {
     "name": "TempCycle-71",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.70716348302693, 88.31778594874427]
-    },
-    "available": true
+      "coordinates": [19.05037271622472, 72.97125682214485]
+    }
   },
   {
     "name": "TempCycle-72",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.619030931847206, 88.29362509066384]
-    },
-    "available": false
+      "coordinates": [19.02803541665564, 73.05930327848596]
+    }
   },
   {
     "name": "TempCycle-73",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.688139984441012, 88.41539472105846]
-    },
-    "available": true
+      "coordinates": [19.08207254803372, 73.01853691047144]
+    }
   },
   {
     "name": "TempCycle-74",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.722183079502713, 88.39696670846052]
-    },
-    "available": true
+      "coordinates": [19.115048610291314, 73.09113980504249]
+    }
   },
   {
     "name": "TempCycle-75",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.74079711993794, 88.36921726014951]
-    },
-    "available": false
+      "coordinates": [19.02534465237265, 73.09671253230125]
+    }
   },
   {
     "name": "TempCycle-76",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.72813444037349, 88.38457484122955]
-    },
-    "available": true
+      "coordinates": [19.08853809980042, 73.02432105933755]
+    }
   },
   {
     "name": "TempCycle-77",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.735425144893153, 88.23798037512242]
-    },
-    "available": true
+      "coordinates": [19.048258125696506, 73.00638376395128]
+    }
   },
   {
     "name": "TempCycle-78",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.677542058686463, 88.33053828811794]
-    },
-    "available": false
+      "coordinates": [18.99688581550602, 73.07999394528068]
+    }
   },
   {
     "name": "TempCycle-79",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.673584099316336, 88.23141439678493]
-    },
-    "available": true
+      "coordinates": [19.053514627684137, 72.99087098925746]
+    }
   },
   {
     "name": "TempCycle-80",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.71790180936124, 88.28424092461968]
-    },
-    "available": true
+      "coordinates": [19.103237222155922, 73.07368983113695]
+    }
   },
   {
     "name": "TempCycle-81",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.759567234481477, 88.26660140219659]
-    },
-    "available": false
+      "coordinates": [19.029347824844717, 72.98892453832879]
+    }
   },
   {
     "name": "TempCycle-82",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.77043242015509, 88.32592279554228]
-    },
-    "available": true
+      "coordinates": [19.023973504516693, 73.0104652392361]
+    }
   },
   {
     "name": "TempCycle-83",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.663188907597544, 88.33190482823653]
-    },
-    "available": true
+      "coordinates": [19.05448103048105, 73.05197844281078]
+    }
   },
   {
     "name": "TempCycle-84",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.74817542572643, 88.40094320701644]
-    },
-    "available": false
+      "coordinates": [18.997322219274118, 73.10214829031948]
+    }
   },
   {
     "name": "TempCycle-85",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.6637240232253, 88.38636824051186]
-    },
-    "available": true
+      "coordinates": [19.020810405613688, 73.01141897709229]
+    }
   },
   {
     "name": "TempCycle-86",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.745319257089132, 88.33285828751767]
-    },
-    "available": true
+      "coordinates": [19.04514849418452, 73.11567562962561]
+    }
   },
   {
     "name": "TempCycle-87",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.75207837009813, 88.36383669999846]
-    },
-    "available": false
+      "coordinates": [19.056428832614927, 73.0853955362631]
+    }
   },
   {
     "name": "TempCycle-88",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.703115282441264, 88.34587843772798]
-    },
-    "available": true
+      "coordinates": [19.113803928731066, 73.05858194002072]
+    }
   },
   {
     "name": "TempCycle-89",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.632224569573275, 88.3505578088984]
-    },
-    "available": true
+      "coordinates": [18.99249365429736, 73.06058791198598]
+    }
   },
   {
     "name": "TempCycle-90",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.726931626603832, 88.38096353104736]
-    },
-    "available": false
+      "coordinates": [18.990006635476714, 73.11829812121401]
+    }
   },
   {
     "name": "TempCycle-91",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.736998204659344, 88.29738124196032]
-    },
-    "available": true
+      "coordinates": [19.02745432591022, 73.04243885775962]
+    }
   },
   {
     "name": "TempCycle-92",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.67217907398366, 88.23890043356134]
-    },
-    "available": true
+      "coordinates": [19.07134661565061, 73.01093342780474]
+    }
   },
   {
     "name": "TempCycle-93",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.753614281559102, 88.25468223065351]
-    },
-    "available": false
+      "coordinates": [19.084947843300235, 73.0118169588526]
+    }
   },
   {
     "name": "TempCycle-94",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.732952937462574, 88.3637395461588]
-    },
-    "available": true
+      "coordinates": [19.031738762806484, 73.0028626294902]
+    }
   },
   {
     "name": "TempCycle-95",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.74962277210253, 88.27166814890964]
-    },
-    "available": true
+      "coordinates": [19.039327912788295, 73.06193678275237]
+    }
   },
   {
     "name": "TempCycle-96",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.6888636506736, 88.24128586590501]
-    },
-    "available": false
+      "coordinates": [18.98060745867569, 73.09387156233616]
+    }
   },
   {
     "name": "TempCycle-97",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.72857006294581, 88.24456548480734]
-    },
-    "available": true
+      "coordinates": [19.001827975748167, 73.05025061490188]
+    }
   },
   {
     "name": "TempCycle-98",
+    "available": true,
     "location": {
       "type": "Point",
-      "coordinates": [26.718705859490775, 88.3726490732005]
-    },
-    "available": true
+      "coordinates": [19.008652299956623, 73.00190199948233]
+    }
   },
   {
     "name": "TempCycle-99",
+    "available": false,
     "location": {
       "type": "Point",
-      "coordinates": [26.634779274869096, 88.37966064448692]
-    },
-    "available": false
+      "coordinates": [19.009910451036774, 72.97291329497114]
+    }
+  },
+  {
+    "name": "TempCycle-100",
+    "available": true,
+    "location": {
+      "type": "Point",
+      "coordinates": [19.102144287647583, 73.10085718116596]
+    }
   }
 ]
