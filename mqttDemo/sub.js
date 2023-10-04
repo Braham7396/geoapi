@@ -1,13 +1,21 @@
 /* eslint-disable no-console */
 const mqtt = require('mqtt');
 
-const client = mqtt.connect('mqtt://broker.hivemq.com');
+const options = {
+  host: '68.178.168.62',
+  port: 1883,
+  username: 'howin',
+  password: 'howin',
+};
+
+const client = mqtt.connect(options);
 
 client.on('connect', () => {
-  client.subscribe('test123');
+  client.subscribe('testmaddog');
   console.log('Client has subscribed');
 });
 
 client.on('message', (topic, message) => {
-  console.log(message.toString());
+  message = message.toString().split(',');
+  console.log(message);
 });

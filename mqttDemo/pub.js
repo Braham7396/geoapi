@@ -2,11 +2,10 @@
 const mqtt = require('mqtt');
 
 const options = {
-  host: '099aa08ec5f04abfb59e89a4cfd21bab.s1.eu.hivemq.cloud',
-  port: 8883,
-  protocol: 'mqtts',
-  username: 'braham',
-  password: 'Anu739625@',
+  host: '68.178.168.62', //! 68.178.168.62
+  port: 1883, //! 8083, 1883
+  username: 'howin', //! howin
+  password: 'howin', //! howin
 };
 
 // initialize the MQTT client
@@ -16,8 +15,9 @@ client.on('connect', () => {
   setInterval(() => {
     const random = Math.round(Math.random() * 50);
     console.log(random);
-    client.publish('testmaddog', random.toString());
-  }, 5);
+    // client.publish('testmaddog', random.toString());
+    client.publish('testmaddog', 'TempCycle-3,10.56,34.67');
+  }, 500);
 });
 
 client.on('error', (error) => {
@@ -25,6 +25,6 @@ client.on('error', (error) => {
 });
 
 client.subscribe('testmaddog');
-client.on('message', (topic, message) => {
-  console.log('Received message:', topic, message.toString());
-});
+// client.on('message', (topic, message) => {
+//   console.log('Received message:', topic, message.toString());
+// });
