@@ -21,7 +21,7 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
-function mqttConnectWithCycleDB() {
+const mqttConnectWithCycleDB = () => {
   const options = {
     host: process.env.MQTT_HOST,
     port: process.env.MQTT_PORT,
@@ -55,7 +55,7 @@ function mqttConnectWithCycleDB() {
   setInterval(() => {
     flag = false; // Reset the flag to false
   }, process.env.MQTT_UPDATE_INTERVAL);
-}
+};
 
 mongoose
   .connect(DB, {

@@ -70,6 +70,7 @@ cycleSchema.post(/^find/, function (docs, next) {
   next();
 });
 
+//! Remove this function later
 cycleSchema.post(/^update/, function (docs, next) {
   console.log(`Updated`);
   next();

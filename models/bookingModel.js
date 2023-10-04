@@ -63,9 +63,11 @@ bookingStream.on('change', async (change) => {
     const endTime = Date.now();
     const startTime = new Date(doc.createdAt);
 
-    //* cost measurement
-    // FIXME - need a better method to calculate cost
-    let cost = Math.round((endTime - startTime) / 1000 / 60); //? 1 Rs/min
+    //* cost measurement => 10 INR if time <= 10 mins, else cost = 10 + (time - 10 mins) * 0.5 INR
+    const durationInSeconds = Math.round((endTime - startTime) / 1000);
+    let cost = 10;
+    if (durationInSeconds > 10 * 60)
+      cost += ((durationInSeconds - 10 * 60) / 60) * 0.5;
 
     //* updating the user balance now
     const user = await User.findById(doc.user);
@@ -95,7 +97,7 @@ bookingStream.on('change', async (change) => {
     );
   } else if (change.operationType === 'insert') {
     const doc = change.fullDocument;
-    // cycle becomes unavailable
+    //* cycle becomes unavailable
     await Cycle.updateOne({ _id: doc.cycle }, { available: false });
   }
 });

@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema(
   {
+    // TODO - Add firstTime attribute so that the minimum recharge is Rs. 50
     name: {
       type: String,
       required: [true, 'Please tell us your name!'],
