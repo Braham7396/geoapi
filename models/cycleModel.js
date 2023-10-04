@@ -70,5 +70,10 @@ cycleSchema.post(/^find/, function (docs, next) {
   next();
 });
 
+cycleSchema.post(/^update/, function (docs, next) {
+  console.log(`Updated`);
+  next();
+});
+
 const Cycle = mongoose.model('Cycle', cycleSchema);
 module.exports = Cycle;
