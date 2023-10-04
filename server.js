@@ -21,6 +21,7 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
+// TODO - Need to restructure code
 const mqttConnectWithCycleDB = () => {
   const options = {
     host: process.env.MQTT_HOST,
@@ -64,7 +65,7 @@ mongoose
   })
   .then(() => {
     console.log('DB connection successful!');
-    mqttConnectWithCycleDB();
+    mqttConnectWithCycleDB(); //! This is a funcking mess, make seperate file for this functionality (Maybe a seperate code and then a bash script to orchestrate all of this)
   });
 
 const port = process.env.PORT;
