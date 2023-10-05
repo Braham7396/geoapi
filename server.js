@@ -26,14 +26,12 @@ const mqttConnectWithCycleDB = () => {
   const options = {
     host: process.env.MQTT_HOST,
     port: process.env.MQTT_PORT,
-    username: process.env.MQTT_USERNAME,
-    password: process.env.MQTT_PASSWORD,
   };
 
   const client = mqtt.connect(options);
 
   client.on('connect', () => {
-    client.subscribe('testmaddog');
+    client.subscribe('esp/humidity');
     console.log('MQTT client has subscribed');
   });
   let flag = false;
@@ -49,8 +47,8 @@ const mqttConnectWithCycleDB = () => {
       },
     };
 
-    await Cycle.updateOne({ name: message[0] }, updateLocation);
-    console.log(`${message[0]}`);
+    await Cycle.updateOne({ name: `TempCycle-${message[0]}` }, updateLocation);
+    console.log(message);
   });
 
   setInterval(() => {
