@@ -37,9 +37,19 @@ exports.deleteBooking = catchAsync(async (req, res, next) => {
   const doc = await Booking.findByIdAndDelete(req.params.id, {
     rawResult: true,
   });
-  let cost = Math.round(
-    (Date.now() - new Date(doc.value.createdAt)) / 1000 / 60
-  ); //* need to be renewed with new algorithm
+  // let cost = Math.round(
+  //   (Date.now() - new Date(doc.value.createdAt)) / 1000 / 60
+  // ); //* need to be renewed with new algorithm
+
+  const endTime = Date.now();
+  const startTime = new Date(doc.value.createdAt);
+
+  //* cost measurement => 10 INR if time <= 10 mins, else cost = 10 + (time - 10 mins) * 0.5 INR
+  const durationInSeconds = Math.round((endTime - startTime) / 1000);
+  let cost = 10;
+  if (durationInSeconds > 10 * 60)
+    cost += ((durationInSeconds - 10 * 60) / 60) * 0.5;
+
   if (req.user.balance < cost) cost = req.user.balance;
   res.status(200).json({
     status: 'success',
