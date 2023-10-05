@@ -2,8 +2,8 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const mqtt = require('mqtt');
-const Cycle = require('./models/cycleModel');
+// const mqtt = require('mqtt');
+// const Cycle = require('./models/cycleModel');
 
 //new shit
 //
