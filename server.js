@@ -49,7 +49,7 @@ const mqttConnectWithCycleDB = () => {
     };
 
     await Cycle.updateOne({ name: `TempCycle-${message[0]}` }, updateLocation);
-    console.log(message);
+    // console.log(message);
   });
 
   setInterval(() => {
