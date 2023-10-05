@@ -32,6 +32,7 @@ const mqttConnectWithCycleDB = () => {
 
   client.on('connect', () => {
     client.subscribe('esp/humidity');
+    // client.subscribe('XOXO');
     console.log('MQTT client has subscribed');
   });
   let flag = false;

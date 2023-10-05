@@ -31,8 +31,6 @@ exports.getAllBookings = factory.getAll(Booking);
 exports.getBooking = factory.getOne(Booking); //! gives user id
 exports.createBooking = factory.createOne(Booking); //! gives user id
 
-//FIXME - make a proper costing system
-
 exports.deleteBooking = catchAsync(async (req, res, next) => {
   const doc = await Booking.findByIdAndDelete(req.params.id, {
     rawResult: true,
@@ -45,10 +43,9 @@ exports.deleteBooking = catchAsync(async (req, res, next) => {
   const startTime = new Date(doc.value.createdAt);
 
   //* cost measurement => 10 INR if time <= 10 mins, else cost = 10 + (time - 10 mins) * 0.5 INR
-  const durationInSeconds = Math.round((endTime - startTime) / 1000);
+  const durationInMinutes = Math.round((endTime - startTime) / 1000 / 60);
   let cost = 10;
-  if (durationInSeconds > 10 * 60)
-    cost += ((durationInSeconds - 10 * 60) / 60) * 0.5;
+  if (durationInMinutes > 10) cost += Math.round(durationInMinutes - 10) * 0.5;
 
   if (req.user.balance < cost) cost = req.user.balance;
   res.status(200).json({

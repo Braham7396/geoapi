@@ -18,6 +18,7 @@ router.patch('/updateMyPassword/', authController.updatePassword);
 router.patch('/updateMe', userController.updateMe);
 router.delete('/deleteMe', userController.deleteMe);
 router.get('/me', userController.getMe);
+router.get('/pastBookings/:page', userController.getMyPastBookings);
 
 router.use(authController.restrictTo('admin'));
 

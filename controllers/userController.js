@@ -14,15 +14,17 @@ const filterObj = (obj, ...allowedFields) => {
 };
 
 exports.updateMe = catchAsync(async (req, res, next) => {
-  if (req.body.password || req.body.passwordConfirm)
+  if (req.body.password || req.body.passwordConfirm || req.body.email)
     return next(
       new AppError(
         'This route is not for password update! Please use /updateMyPassword.',
         400
       )
     );
+  if (req.body.email)
+    return next(new AppError('Email updation not supported', 400));
 
-  const filteredBody = filterObj(req.body, 'name', 'email');
+  const filteredBody = filterObj(req.body, 'name');
 
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
@@ -53,6 +55,18 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
   });
 });
 
+// TODO - Add pagination
+exports.getMyPastBookings = catchAsync(async (req, res, next) => {
+  const pastBookings = await PastBooking.findOne({ userId: req.user.id });
+  // eslint-disable-next-line prefer-destructuring
+  const page = req.params.page;
+  res.status(200).json({
+    status: 'success',
+    data: pastBookings,
+    page: page,
+  });
+});
+
 exports.getMe = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id); // no cycle populate here
   user._id = null;
@@ -61,6 +75,8 @@ exports.getMe = catchAsync(async (req, res, next) => {
     data: { user },
   });
 });
+
+//! -- ADMIN ZONE --
 
 exports.getUser = factory.getOne(User, { path: 'cycle' }); // add populate cycle here
 exports.getAllUsers = factory.getAll(User);

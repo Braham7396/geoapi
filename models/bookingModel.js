@@ -64,10 +64,10 @@ bookingStream.on('change', async (change) => {
     const startTime = new Date(doc.createdAt);
 
     //* cost measurement => 10 INR if time <= 10 mins, else cost = 10 + (time - 10 mins) * 0.5 INR
-    const durationInSeconds = Math.round((endTime - startTime) / 1000);
+    const durationInMinutes = Math.round((endTime - startTime) / 1000 / 60);
     let cost = 10;
-    if (durationInSeconds > 10 * 60)
-      cost += ((durationInSeconds - 10 * 60) / 60) * 0.5;
+    if (durationInMinutes > 10)
+      cost += Math.round(durationInMinutes - 10) * 0.5;
 
     //* updating the user balance now
     const user = await User.findById(doc.user);
